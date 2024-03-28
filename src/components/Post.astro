@@ -1,18 +1,17 @@
 ---
-
+	const {post: {title, description,content,created_at}, } = Astro.props;
 ---
 
-<article class="">
+<article class="bg-black text-white max-w-sm px-5 py-6 flex flex-col gap-2 rounded">
 	<img
 		src="https://www.educaciontrespuntocero.com/wp-content/uploads/2020/04/mejores-bancos-de-imagenes-gratis.jpg"
 		alt=""
+		class="rounded"
 	/>
-	<h2>The post Title</h2>
-	<p>A port description</p>
-	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores rerum
-		consequatur quo laborum dolorum sapiente excepturi dicta hic eligendi beatae
-		fugit, quaerat quos autem reprehenderit? Illo quod quo dolor nam!
+	<h2 class="text-2x1 font-bold">{title}</h2>
+	<p>{description}</p>
+	<p class="text-zinc-300">
+		{content}
 	</p>
-	<p>10/12/2014 - 16 min read</p>
+	<p class="text-zinc-300">{new Date(created_at).toLocaleDateString()} - 5 min read</p>
 </article>
