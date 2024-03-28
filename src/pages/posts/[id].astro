@@ -17,7 +17,9 @@ const { title, description, content, created_at } = await postResponse.json();
 
 <DefaultLayout>
 	<div>
-		<article class="text-black max-w-4xl mx-auto px-5 py-6 flex flex-col gap-2 rounded">
+		<article
+			class="text-black max-w-4xl mx-auto px-5 py-6 flex flex-col gap-2 rounded"
+		>
 			<img
 				src="https://www.educaciontrespuntocero.com/wp-content/uploads/2020/04/mejores-bancos-de-imagenes-gratis.jpg"
 				alt=""
@@ -28,7 +30,6 @@ const { title, description, content, created_at } = await postResponse.json();
 			<p>
 				{content}
 			</p>
-			
 		</article>
 	</div>
 </DefaultLayout>
